@@ -365,8 +365,10 @@ class KeyFrameRotation extends KeyFrameNumeric {
 
   @override
   void setValue(ActorComponent component, double value, double mix) {
-    ActorNode node = component as ActorNode;
-    node.rotation = node.rotation * (1.0 - mix) + value * mix;
+    try {
+      ActorNode node = component as ActorNode;
+      node.rotation = node.rotation * (1.0 - mix) + value * mix;
+    } catch (error) {}
   }
 }
 
