@@ -301,8 +301,10 @@ class KeyFramePosX extends KeyFrameNumeric {
 
   @override
   void setValue(ActorComponent component, double value, double mix) {
-    ActorNode node = component as ActorNode;
-    node.x = node.x * (1.0 - mix) + value * mix;
+    try {
+      ActorNode node = component as ActorNode;
+      node.x = node.x * (1.0 - mix) + value * mix;
+    } catch (error) {}
   }
 }
 
@@ -317,8 +319,10 @@ class KeyFramePosY extends KeyFrameNumeric {
 
   @override
   void setValue(ActorComponent component, double value, double mix) {
-    ActorNode node = component as ActorNode;
-    node.y = node.y * (1.0 - mix) + value * mix;
+    try {
+      ActorNode node = component as ActorNode;
+      node.y = node.y * (1.0 - mix) + value * mix;
+    } catch (error) {}
   }
 }
 
@@ -333,8 +337,10 @@ class KeyFrameScaleX extends KeyFrameNumeric {
 
   @override
   void setValue(ActorComponent component, double value, double mix) {
-    ActorNode node = component as ActorNode;
-    node.scaleX = node.scaleX * (1.0 - mix) + value * mix;
+    try {
+      ActorNode node = component as ActorNode;
+      node.scaleX = node.scaleX * (1.0 - mix) + value * mix;
+    } catch (error) {}
   }
 }
 
@@ -349,8 +355,10 @@ class KeyFrameScaleY extends KeyFrameNumeric {
 
   @override
   void setValue(ActorComponent component, double value, double mix) {
-    ActorNode node = component as ActorNode;
-    node.scaleY = node.scaleY * (1.0 - mix) + value * mix;
+    try {
+      ActorNode node = component as ActorNode;
+      node.scaleY = node.scaleY * (1.0 - mix) + value * mix;
+    } catch (error) {}
   }
 }
 
@@ -383,8 +391,10 @@ class KeyFrameOpacity extends KeyFrameNumeric {
 
   @override
   void setValue(ActorComponent component, double value, double mix) {
-    ActorNode node = component as ActorNode;
-    node.opacity = node.opacity * (1.0 - mix) + value * mix;
+    try {
+      ActorNode node = component as ActorNode;
+      node.opacity = node.opacity * (1.0 - mix) + value * mix;
+    } catch (error) {}
   }
 }
 
